@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite the article."
+title: "Configuration Fingerprints in Flow-Based Slow-HTTP Detection: code and artefacts"
+authors:
+  - family-names: Shah
+    given-names: Syed Habib Ullah
+    affiliation: "The University of Lahore"
+    orcid: "https://orcid.org/0009-0009-4749-8970"
+license: MIT

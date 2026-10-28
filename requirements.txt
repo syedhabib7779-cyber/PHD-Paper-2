@@ -1,0 +1,10 @@
+# Versions used for all reported results (Kaggle, Python 3.12.13, 1x NVIDIA T4)
+numpy==2.0.2
+pandas==2.3.3
+torch==2.10.0
+scikit-learn==1.6.1
+xgboost==3.2.0
+scipy==1.16.3
+matplotlib
+pyarrow
+# full environment: results/requirements_freeze.txt (exported by the notebook)

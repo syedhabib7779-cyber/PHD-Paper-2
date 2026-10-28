@@ -1,0 +1,12 @@
+file,bytes,sha256,used_in_study
+datasets/dhoogla/cicdos2017/cicdos2017.parquet,27771330,b1a960be2fbd9e22346cff7d8338854737fd4a7536445e98fdd33c0bd8aa6178,yes (external capture)
+datasets/mdalamintalukder/cicids2017/MachineLearningCVE/Wednesday-workingHours.pcap_ISCX.csv,225166395,893c27dc968bf7a8adef1689f90be55ca4a4dc3088fb63d6ff247ac56856df2a,yes (source domain)
+datasets/mdalamintalukder/cicids2017/MachineLearningCVE/Monday-WorkingHours.pcap_ISCX.csv,176927918,852c4beb34eda186f32561fa79df7a0747e92e1a6535b01270820dd9ffe17f34,yes (audit only)
+s3://cse-cic-ids2018/Processed Traffic Data for ML Algorithms/Thursday-15-02-2018_TrafficForML_CICFlowMeter.csv,375945899,fa2947a8256d81ee9103ae16139d62d0e17aa23e696ee80d9e76fb51c01c9c4b,yes (target domain)
+s3://cse-cic-ids2018/Processed Traffic Data for ML Algorithms/Friday-16-02-2018_TrafficForML_CICFlowMeter.csv,333723605,1a4919faa0c49c7af97230b0c2d076eba23ee6dd81103a3801d51ac316355d8b,yes (audit only)
+datasets/mdalamintalukder/cicids2017/MachineLearningCVE/Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv,77123859,6ff1580f5f81c0ae28a26f7631721018577f5f7c5e0feac28b795fcfe7b411ee,no (attached but unused)
+datasets/mdalamintalukder/cicids2017/MachineLearningCVE/Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv,76906168,ca1824c51bfbb7b3c72290a11be04366ba8815878c6a1cc5c44cb1cee269e99b,no (attached but unused)
+datasets/mdalamintalukder/cicids2017/MachineLearningCVE/Friday-WorkingHours-Morning.pcap_ISCX.csv,58316725,53a41c24d570ea83b7ac55b2e94df94e7a8216aeb80a2af0246b6bc8bb543000,no (attached but unused)
+datasets/mdalamintalukder/cicids2017/MachineLearningCVE/Thursday-WorkingHours-Afternoon-Infilteration.pcap_ISCX.csv,83102436,6bcda3857c2504676034e3ea57762d38393cc734cb377a726bd5cb153961b1b5,no (attached but unused)
+datasets/mdalamintalukder/cicids2017/MachineLearningCVE/Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX.csv,52023263,d67066211fb1689c78406f1506f4c44704ecb92088353d5c96d96d6474eb819d,no (attached but unused)
+datasets/mdalamintalukder/cicids2017/MachineLearningCVE/Tuesday-WorkingHours.pcap_ISCX.csv,135078995,52b8692ae8c7d2ed04671fe2b98335693c0a92c7ab157d8c8b534d6523080851,no (attached but unused)

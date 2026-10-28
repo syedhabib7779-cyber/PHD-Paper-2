@@ -1,0 +1,91 @@
+k,intervention,lost_total,lost_in_cluster,cluster_size
+0.5,single: duration,0,0,351
+0.5,single: flow_iat_mean,0,0,351
+0.5,single: flow_iat_std,0,0,351
+0.5,single: flow_iat_max,0,0,351
+0.5,single: flow_iat_min,0,0,351
+0.5,single: fwd_iat_tot,0,0,351
+0.5,single: fwd_iat_mean,0,0,351
+0.5,single: fwd_iat_std,0,0,351
+0.5,single: fwd_iat_max,0,0,351
+0.5,single: fwd_iat_min,0,0,351
+0.5,single: bwd_iat_tot,0,0,351
+0.5,single: bwd_iat_mean,0,0,351
+0.5,single: bwd_iat_std,0,0,351
+0.5,single: bwd_iat_max,0,0,351
+0.5,single: bwd_iat_min,0,0,351
+0.5,single: active_mean,0,0,351
+0.5,single: active_std,0,0,351
+0.5,single: idle_mean,0,0,351
+0.5,single: idle_std,0,0,351
+0.5,single: flow_byts_s,0,0,351
+0.5,single: flow_pkts_s,0,0,351
+0.5,group: duration,0,0,351
+0.5,group: IAT min (flow/fwd/bwd),0,0,351
+0.5,group: IAT max,0,0,351
+0.5,group: IAT mean,0,0,351
+0.5,group: IAT std,0,0,351
+0.5,group: IAT totals,0,0,351
+0.5,group: active/idle,0,0,351
+0.5,group: rates (divided by k),0,0,351
+0.5,full re-timing,351,351,351
+0.9,single: duration,0,0,350
+0.9,single: flow_iat_mean,0,0,350
+0.9,single: flow_iat_std,0,0,350
+0.9,single: flow_iat_max,0,0,350
+0.9,single: flow_iat_min,0,0,350
+0.9,single: fwd_iat_tot,0,0,350
+0.9,single: fwd_iat_mean,0,0,350
+0.9,single: fwd_iat_std,0,0,350
+0.9,single: fwd_iat_max,0,0,350
+0.9,single: fwd_iat_min,0,0,350
+0.9,single: bwd_iat_tot,0,0,350
+0.9,single: bwd_iat_mean,0,0,350
+0.9,single: bwd_iat_std,0,0,350
+0.9,single: bwd_iat_max,0,0,350
+0.9,single: bwd_iat_min,0,0,350
+0.9,single: active_mean,0,0,350
+0.9,single: active_std,0,0,350
+0.9,single: idle_mean,0,0,350
+0.9,single: idle_std,0,0,350
+0.9,single: flow_byts_s,0,0,350
+0.9,single: flow_pkts_s,0,0,350
+0.9,group: duration,0,0,350
+0.9,group: IAT min (flow/fwd/bwd),0,0,350
+0.9,group: IAT max,0,0,350
+0.9,group: IAT mean,0,0,350
+0.9,group: IAT std,0,0,350
+0.9,group: IAT totals,0,0,350
+0.9,group: active/idle,0,0,350
+0.9,group: rates (divided by k),0,0,350
+0.9,full re-timing,350,350,350
+2.0,single: duration,0,0,351
+2.0,single: flow_iat_mean,0,0,351
+2.0,single: flow_iat_std,0,0,351
+2.0,single: flow_iat_max,0,0,351
+2.0,single: flow_iat_min,0,0,351
+2.0,single: fwd_iat_tot,0,0,351
+2.0,single: fwd_iat_mean,0,0,351
+2.0,single: fwd_iat_std,0,0,351
+2.0,single: fwd_iat_max,0,0,351
+2.0,single: fwd_iat_min,0,0,351
+2.0,single: bwd_iat_tot,0,0,351
+2.0,single: bwd_iat_mean,0,0,351
+2.0,single: bwd_iat_std,0,0,351
+2.0,single: bwd_iat_max,0,0,351
+2.0,single: bwd_iat_min,0,0,351
+2.0,single: active_mean,0,0,351
+2.0,single: active_std,0,0,351
+2.0,single: idle_mean,0,0,351
+2.0,single: idle_std,0,0,351
+2.0,single: flow_byts_s,0,0,351
+2.0,single: flow_pkts_s,0,0,351
+2.0,group: duration,0,0,351
+2.0,group: IAT min (flow/fwd/bwd),0,0,351
+2.0,group: IAT max,0,0,351
+2.0,group: IAT mean,0,0,351
+2.0,group: IAT std,0,0,351
+2.0,group: IAT totals,0,0,351
+2.0,group: active/idle,0,0,351
+2.0,group: rates (divided by k),0,0,351
+2.0,full re-timing,351,351,351
