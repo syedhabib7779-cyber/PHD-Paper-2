@@ -1,0 +1,132 @@
+10.0s 1 0.00s - Debugger warning: It seems that frozen modules are being used, which may
+10.0s 2 0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+10.0s 3 0.00s - to python to disable frozen modules.
+10.0s 4 0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+10.9s 5 0.00s - Debugger warning: It seems that frozen modules are being used, which may
+10.9s 6 0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+10.9s 7 0.00s - to python to disable frozen modules.
+10.9s 8 0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+12.6s 9 $ pip install -q remotezip cicflowmeter nfstream
+20.7s 10 
+20.7s 11 $ DEBIAN_FRONTEND=noninteractive apt-get -qq update && DEBIAN_FRONTEND=noninteractive apt-get -qq install -y tshark >/dev/null
+56.0s 12 W: Skipping acquire of configured file 'main/source/Sources' as repository 'https://r2u.stat.illinois.edu/ubuntu noble InRelease' does not seem to provide it (sources.list entry misspelt?)
+56.0s 13 
+56.0s 14 $ pip show cicflowmeter nfstream | grep -E 'Name|Version'; tshark --version | head -1
+57.7s 15 Name: cicflowmeter
+57.7s 16 Version: 0.5.0
+57.7s 17 Name: nfstream
+57.7s 18 Version: 6.6.0
+57.7s 19 TShark (Wireshark) 4.2.2 (Git v4.2.2 packaged as 4.2.2-1.1build3).
+57.7s 20 Running as user "root" and group "root". This could be dangerous.
+57.7s 21 
+86.2s 22 extracted /tmp/pcap/UCAP172.31.69.25-part1.pcap 4.31 GB
+86.2s 23 $ tshark -r "/tmp/pcap/UCAP172.31.69.25-part1.pcap" -Y "tcp.port==21 && frame.time_epoch >= 1518789600 && frame.time_epoch <= 1518793800" -w "/tmp/victim_port21_window.pcap"
+451.0s 24 Running as user "root" and group "root". This could be dangerous.
+451.0s 25 
+451.0s 26 $ capinfos -c -a -e "/tmp/victim_port21_window.pcap"
+451.0s 27 File name:           /tmp/victim_port21_window.pcap
+451.0s 28 Number of packets:   211 k
+451.0s 29 First packet time:   2018-02-16 14:12:14.134225
+451.0s 30 Last packet time:    2018-02-16 15:05:13.888214
+451.0s 31 
+509.2s 32 {'source': 'released CSV (CICFlowMeter, CIC)', 'records': 139890, 'dst_port_21_share': 1.0, 'fwd_pkts_eq1_share': 1.0, 'bwd_pkts_eq1_share': 1.0, 'zero_payload_share': 1.0, 'duration_us_median': 3.0, 'duration_us_p95': 22.0, 'distinct_(dur,fwd,bwd,bytes)': 55}
+509.4s 33 $ cicflowmeter -f "/tmp/victim_port21_window.pcap" -c "/kaggle/working/m7_reextraction/cicflowmeter_python_flows.csv"
+512.4s 34 Traceback (most recent call last):
+512.4s 35 File "/usr/local/bin/cicflowmeter", line 6, in <module>
+512.4s 36 sys.exit(main())
+512.4s 37 ~~~~^^
+512.4s 38 File "/usr/local/lib/python3.13/dist-packages/cicflowmeter/sniffer.py", line 295, in main
+512.4s 39 sniffer, session = create_sniffer(
+512.4s 40 ~~~~~~~~~~~~~~^
+512.4s 41 args.input_file,
+512.4s 42 ^^^^^^^^^^^^^^^^
+512.4s 43 ...<4 lines>...
+512.4s 44 args.verbose,
+512.4s 45 ^^^^^^^^^^^^^
+512.4s 46 )
+512.4s 47 ^
+512.4s 48 File "/usr/local/lib/python3.13/dist-packages/cicflowmeter/sniffer.py", line 40, in create_sniffer
+512.4s 49 fields = fields.split(",")
+512.4s 50 ^^^^^^^^^^^^
+512.4s 51 AttributeError: 'bool' object has no attribute 'split'
+512.4s 52 
+512.4s 53 !! python CICFlowMeter FAILED
+512.4s 54 Traceback (most recent call last):
+512.4s 55 File "/tmp/ipykernel_16/4135622709.py", line 10, in <cell line: 0>
+512.4s 56 C = pd.read_csv(CF, low_memory=False); print("python CICFlowMeter flows:", len(C), "in {:.0f} s".format(time.time() - t0))
+512.4s 57 File "/usr/local/lib/python3.13/dist-packages/pandas/io/parsers/readers.py", line 1026, in read_csv
+512.4s 58 return _read(filepath_or_buffer, kwds)
+512.4s 59 File "/usr/local/lib/python3.13/dist-packages/pandas/io/parsers/readers.py", line 620, in _read
+512.4s 60 parser = TextFileReader(filepath_or_buffer, **kwds)
+512.4s 61 File "/usr/local/lib/python3.13/dist-packages/pandas/io/parsers/readers.py", line 1620, in __init__
+512.4s 62 self._engine = self._make_engine(f, self.engine)
+512.4s 63 ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+512.4s 64 File "/usr/local/lib/python3.13/dist-packages/pandas/io/parsers/readers.py", line 1880, in _make_engine
+512.4s 65 self.handles = get_handle(
+512.4s 66 ~~~~~~~~~~^
+512.4s 67 f,
+512.4s 68 ^^
+512.4s 69 ...<6 lines>...
+512.4s 70 storage_options=self.options.get("storage_options", None),
+512.4s 71 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+512.4s 72 )
+512.4s 73 ^
+512.4s 74 File "/usr/local/lib/python3.13/dist-packages/pandas/io/common.py", line 873, in get_handle
+512.4s 75 handle = open(
+512.4s 76 handle,
+512.4s 77 ...<3 lines>...
+512.4s 78 newline="",
+512.4s 79 )
+512.4s 80 FileNotFoundError: [Errno 2] No such file or directory: '/kaggle/working/m7_reextraction/cicflowmeter_python_flows.csv'
+512.4s 81 
+512.4s 82 Traceback (most recent call last):
+512.4s 83 File "/tmp/ipykernel_16/4135622709.py", line 10, in <cell line: 0>
+512.4s 84 C = pd.read_csv(CF, low_memory=False); print("python CICFlowMeter flows:", len(C), "in {:.0f} s".format(time.time() - t0))
+512.4s 85 File "/usr/local/lib/python3.13/dist-packages/pandas/io/parsers/readers.py", line 1026, in read_csv
+512.4s 86 return _read(filepath_or_buffer, kwds)
+512.4s 87 File "/usr/local/lib/python3.13/dist-packages/pandas/io/parsers/readers.py", line 620, in _read
+512.4s 88 parser = TextFileReader(filepath_or_buffer, **kwds)
+512.4s 89 File "/usr/local/lib/python3.13/dist-packages/pandas/io/parsers/readers.py", line 1620, in __init__
+512.4s 90 self._engine = self._make_engine(f, self.engine)
+512.4s 91 ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+512.4s 92 File "/usr/local/lib/python3.13/dist-packages/pandas/io/parsers/readers.py", line 1880, in _make_engine
+512.4s 93 self.handles = get_handle(
+512.4s 94 ~~~~~~~~~~^
+512.4s 95 f,
+512.4s 96 ^^
+512.4s 97 ...<6 lines>...
+512.4s 98 storage_options=self.options.get("storage_options", None),
+512.4s 99 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+512.4s 100 )
+512.4s 101 ^
+512.4s 102 File "/usr/local/lib/python3.13/dist-packages/pandas/io/common.py", line 873, in get_handle
+512.4s 103 handle = open(
+512.4s 104 handle,
+512.4s 105 ...<3 lines>...
+512.4s 106 newline="",
+512.4s 107 )
+512.4s 108 FileNotFoundError: [Errno 2] No such file or directory: '/kaggle/working/m7_reextraction/cicflowmeter_python_flows.csv'
+540.8s 109 NFStream flows: 105551 in 28 s
+540.8s 110 {'source': 're-extracted: NFStream (independent flow meter)', 'records': 105551, 'dst_port_21_share': 1.0, 'fwd_pkts_eq1_share': 1.0, 'bwd_pkts_eq1_share': 1.0, 'zero_payload_share': None, 'duration_us_median': 0.0, 'duration_us_p95': 0.0, 'distinct_(dur,fwd,bwd,bytes)': 3, 'src_ips': 2, 'top_src_ip': '13.59.126.31', 'note': 'NFStream counts IP bytes, not payload; duration has millisecond resolution'}
+540.9s 111 0                                                                           1
+540.9s 112 source                        released CSV (CICFlowMeter, CIC)                             re-extracted: NFStream (independent flow meter)
+540.9s 113 records                                                 139890                                                                      105551
+540.9s 114 dst_port_21_share                                          1.0                                                                         1.0
+540.9s 115 fwd_pkts_eq1_share                                         1.0                                                                         1.0
+540.9s 116 bwd_pkts_eq1_share                                         1.0                                                                         1.0
+540.9s 117 zero_payload_share                                         1.0                                                                         NaN
+540.9s 118 duration_us_median                                         3.0                                                                         0.0
+540.9s 119 duration_us_p95                                           22.0                                                                         0.0
+540.9s 120 distinct_(dur,fwd,bwd,bytes)                                55                                                                           3
+540.9s 121 src_ips                                                    NaN                                                                         2.0
+540.9s 122 top_src_ip                                                 NaN                                                                13.59.126.31
+540.9s 123 note                                                       NaN  NFStream counts IP bytes, not payload; duration has millisecond resolution
+540.9s 124 download /kaggle/working/m7_reextraction_outputs.zip
+545.2s 125 /usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\|'
+545.2s 126 cells[i][c] = re.sub('\\\\\|', '|', cell)
+545.5s 127 /usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\_'
+545.5s 128 text = re.sub(r'_', '\_', text) # Escape underscores in display text
+546.6s 129 [NbConvertApp] Converting notebook __notebook__.ipynb to notebook
+546.7s 130 [NbConvertApp] Writing 20160 bytes to __notebook__.ipynb
+550.3s 131 [NbConvertApp] Converting notebook __notebook__.ipynb to html
+551.1s 132 [NbConvertApp] Writing 317590 bytes to __results__.html

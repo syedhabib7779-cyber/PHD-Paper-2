@@ -43,6 +43,8 @@ Public releases of the Canadian Institute for Cybersecurity (https://www.unb.ca/
 | Appendix D | `notebooks/pcap_check_slowhttptest_executed.ipynb` |
 | Table 11, Fig. 6 (benign re-timing) | `R11_benign_retiming.csv`, `R11_benign_retiming_summary.csv` |
 | Counterfactual interventions (Sec. 4.1) | `R8_counterfactual_interventions.csv` |
+| Table 18 (loss ablation) | `R12_loss_ablation_summary.csv`; per-seed values in the run log `notebooks/paper2_revision_run_log_v8.txt` |
+| Appendix D, NFStream re-extraction | `notebooks/m7_flow_reextraction.ipynb`, `notebooks/m7_flow_reextraction_run_log.txt` |
 | Per-seed ledger | `results/results.csv`, `results/Ledger.md` |
 
 ## Settings that matter
